@@ -5,7 +5,9 @@ body {
 }
 
 #wrapper {
-	/*overflow: auto;*/
+	/*overflow: hidden;*/
+	/*position: relative;*/
+	/*height: 100%;*/
 }
 
 .skewed-bg {
@@ -14,11 +16,37 @@ body {
 	background: #00B285;
 	padding: 600px 0;
 	/* IE 9 */
-	-webkit-transform: rotate(-4deg);
+	/*-webkit-transform: rotate(-4deg);*/
 	/* Chrome, Safari, Opera */
-	transform: rotate(-4deg);
+	/*transform: rotate(-4deg);*/
 	margin-top: -1520px;
 	margin-left: -200px;
+	margin-right: -8px;
+}
+
+#hero-box {
+	position: absolute;
+	background: #00B285;
+	width: 100%;
+	height: 230px;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
+#hero-box:after {
+	position: absolute;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	content: "";
+	left: 0;
+	top: 230px;
+	z-index: -1;
+	/*width: 100%;*/
+	height: 0;
+	border-left: 0px solid transparent;
+	border-right: 100vw solid transparent;
+	border-top: 30px solid #00B285;
 }
 
 a,
@@ -233,16 +261,37 @@ section.icons {
 		margin: 0 0 1.5rem;
 		padding: 0;
 	}
+
+	#hero-box {
+		height: 270px;
+	}
+	#hero-box:after {
+		top: 270px;
+	}
 }
 
 @media only screen and (max-width: 768px) {
 	.skewed-bg {
 		margin-top: -1560px;
 	}
+
+/*	#hero-box {
+		height: 250px;
+	}
+	#hero-box:after {
+		top: 250px;
+	}*/
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 504px) {
 	.skewed-bg {
 		margin-top: -1640px;
+	}
+
+	#hero-box {
+		height: 350px;
+	}
+	#hero-box:after {
+		top: 350px;
 	}
 }
