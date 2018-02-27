@@ -1,4 +1,11 @@
+
+html {
+	min-height: 100%;
+	position: relative;
+}
+
 body {
+	height: 100%;
 	background: #222;
 	color: #FFF;
 	font-family: 'Exo', serif;
@@ -10,7 +17,7 @@ body {
 	/*height: 100%;*/
 }
 
-#hero-box {
+#banner-box--top {
 	position: absolute;
 	background: #00B285;
 	width: 100%;
@@ -19,7 +26,7 @@ body {
 	top: 0;
 	z-index: -1;
 }
-#hero-box:after {
+#banner-box--top:after {
 	position: absolute;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -33,6 +40,23 @@ body {
 	border-left: 0px solid transparent;
 	border-right: 100vw solid transparent;
 	border-top: 40px solid #00B285;
+}
+
+#banner-box--left {
+	position: absolute;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+	/*width: 10px;*/
+	height: 100%;
+	left: 0;
+	top: 0;
+	/*bottom: 0;*/
+	z-index: -1;
+	border-right: 80px solid transparent;
+	border-bottom: 100vh solid #512da8;
 }
 
 a,
@@ -253,12 +277,12 @@ section.icons {
 		padding: 0;
 	}
 	li.icons-list__item:last-child {
-		margin-left: -20px;
+		margin-left: -40px;
 	}
-	#hero-box {
+	#banner-box--top {
 		height: 270px;
 	}
-	#hero-box:after {
+	#banner-box--top:after {
 		top: 270px;
 	}
 }
@@ -267,10 +291,10 @@ section.icons {
 }
 
 @media only screen and (max-width: 515px) {
-	#hero-box {
+	#banner-box--top {
 		height: 330px;
 	}
-	#hero-box:after {
+	#banner-box--top:after {
 		top: 328px;
 	}
 }
